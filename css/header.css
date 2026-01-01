@@ -1,0 +1,50 @@
+header {
+  position: relative;
+  width: 100%;
+  padding-top: clamp(41px, 6vw, 56px);
+
+  .container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo_img {
+      width: 145.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        font-weight: 500;
+        font-size: 13px;
+      }
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    button {
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .burger_menu_icon {
+      display: none;
+      @media (max-width: 992px) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .vector_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,106 @@
+footer {
+  width: 100%;
+  background-color: var(--accent);
+  padding-block: clamp(40px, 7vw, 61px);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .media {
+      width: 14.77%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .social_icons {
+        display: flex;
+        gap: 1rem;
+
+        i {
+          font-size: 20px;
+          color: white;
+          cursor: pointer;
+          transition: color 0.3s ease, transform 0.3s ease;
+
+          &:hover {
+            color: var(--secondary);
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    .info_wrapper {
+      width: 74.8%;
+
+      display: flex;
+      gap: 1rem;
+
+      .links {
+        width: 65.3%;
+
+        display: flex;
+        gap: 2rem;
+
+        .left,
+        .right {
+          width: 50%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          a {
+            width: 100%;
+            color: white;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 163%;
+            transition: background-color 0.2s ease, padding 0.2s ease,
+              border 0.2s ease;
+
+            &:hover {
+              background-color: var(--secondary);
+              padding-left: 1rem;
+              border-left: 3px solid white;
+            }
+          }
+        }
+      }
+
+      form {
+        width: 34.7%;
+        height: fit-content;
+        display: flex;
+        gap: 8px;
+        input {
+          width: 76%;
+          padding: 9px 16px;
+          border-radius: 22px;
+          border: none;
+          transition: color 0.3s ease, background-color 0.3s ease;
+
+          font-weight: 300;
+          font-size: 13px;
+          line-height: 200%;
+
+          &:focus {
+            outline: none;
+            background-color: #45464b4b;
+            color: white;
+          }
+        }
+
+        button.cta {
+          width: 24%;
+          padding: 12.5px 0;
+          text-align: center;
+          box-shadow: none;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}

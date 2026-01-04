@@ -1,0 +1,96 @@
+header {
+  position: relative;
+  width: 100%;
+  padding-top: clamp(41px, 6vw, 56px);
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        font-weight: 500;
+        font-size: 13px;
+
+        position: relative;
+        margin: 20px 0;
+        padding: 10px 20px;
+        transition: 0.5s;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-top: 2px solid var(--secondary);
+          border-bottom: 2px solid var(--secondary);
+          transform: scaleY(2);
+          opacity: 0;
+          transition: 0.3s;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: var(--secondary);
+          transform: scale(0);
+          opacity: 0;
+          transition: 0.3s;
+          z-index: -1;
+        }
+        &:hover {
+          color: #fff;
+          &:before {
+            transform: scaleY(1);
+            opacity: 1;
+          }
+          &:after {
+            transform: scaleY(1);
+            opacity: 1;
+          }
+        }
+      }
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    button {
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .burger_menu_icon {
+      display: none;
+      @media (max-width: 992px) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .vector_img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+
+    height: clamp(450px, 100vw, 650px);
+
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+}

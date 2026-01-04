@@ -1,0 +1,111 @@
+#about {
+  width: 100%;
+  padding-top: clamp(112px, 12vw, 132px);
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      gap: 40px;
+    }
+
+    .left {
+      width: 50%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+
+      p.des {
+        width: 445px;
+        max-width: 90%;
+        text-align: justify;
+
+        @media (max-width: 768px) {
+          text-align: center;
+          width: 500px;
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      .content_card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 8px;
+
+        @media (max-width: 768px) {
+          align-items: start;
+          gap: 1rem;
+        }
+
+        .card_head {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: clamp(16px, 4vw, 24px);
+
+          @media (max-width: 768px) {
+            justify-content: start;
+            background-color: #fff0ec;
+            width: 95dvw;
+            padding-right: 5dvw;
+
+            border-top-left-radius: 39px;
+            border-bottom-left-radius: 39px;
+          }
+
+          @media (min-width: 576px) and (max-width: 768px) {
+            gap: 2rem;
+          }
+
+          .card_number {
+            color: white;
+            background-color: #f3603c;
+            border-radius: 39px;
+            padding: 8px 24px;
+
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 145%;
+          }
+
+          .card_title {
+            width: 449px;
+            max-width: calc(100% - 24px - 67px);
+          }
+        }
+
+        p.des {
+          width: 449px;
+          max-width: calc(100% - 24px - 67px);
+
+          @media (max-width: 768px) {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,8 +4,15 @@ footer {
   padding-block: clamp(40px, 7vw, 61px);
 
   .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: clamp(48px, 12vw, 56px);
+    }
 
     .media {
       width: 14.77%;
@@ -14,9 +21,20 @@ footer {
       flex-direction: column;
       justify-content: space-between;
 
+      @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 56px;
+      }
+
       .social_icons {
         display: flex;
         gap: 1rem;
+
+        @media (max-width: 768px) {
+          gap: clamp(1.5rem, 6vw, 2rem);
+        }
 
         i {
           font-size: 20px;
@@ -24,10 +42,37 @@ footer {
           cursor: pointer;
           transition: color 0.3s ease, transform 0.3s ease;
 
+          @media (max-width: 768px) {
+            font-size: clamp(1.5rem, 9vw, 2rem);
+          }
+
           &:hover {
             color: var(--secondary);
             transform: scale(1.2);
           }
+        }
+      }
+
+      .logo_img {
+        @media (max-width: 768px) {
+          width: 157.3px;
+        }
+      }
+
+      .copyright {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        color: white;
+        opacity: 0.5;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 145%;
+        text-align: center;
+
+        @media (max-width: 768px) {
+          position: static;
         }
       }
     }
@@ -38,11 +83,33 @@ footer {
       display: flex;
       gap: 1rem;
 
+      @media (max-width: 768px) {
+        width: fit-content;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: clamp(48px, 12vw, 56px);
+      }
+
+      @media (max-width: 576px) {
+        width: 90%;
+      }
+
       .links {
         width: 65.3%;
 
         display: flex;
         gap: 2rem;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          justify-content: center;
+          gap: 44px;
+        }
+
+        @media (max-width: 576px) {
+          width: 90%;
+          justify-content: space-between;
+        }
 
         .left,
         .right {
@@ -52,19 +119,37 @@ footer {
           flex-direction: column;
           gap: 8px;
 
+          @media (max-width: 768px) {
+            width: fit-content;
+            flex-direction: row;
+            gap: 44px;
+          }
+
+          @media (max-width: 576px) {
+            flex-direction: column;
+            gap: 8px;
+          }
+
+          .two_links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+
           a {
             width: 100%;
             color: white;
             font-weight: 300;
             font-size: 16px;
             line-height: 163%;
-            transition: background-color 0.2s ease, padding 0.2s ease,
-              border 0.2s ease;
+            transition: background-color 0.3s ease, padding 0.2s ease,
+              border 0.2s ease, box-shadow 0.3s ease;
 
             &:hover {
               background-color: var(--secondary);
               padding-left: 1rem;
-              border-left: 3px solid white;
+              /* border-left: 3px solid white; */
+              box-shadow: inset 12px 0px 10px 1px rgba(255, 255, 255, 0.555);
             }
           }
         }
@@ -75,6 +160,16 @@ footer {
         height: fit-content;
         display: flex;
         gap: 8px;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+          gap: 8px;
+        }
+
         input {
           width: 76%;
           padding: 9px 16px;
@@ -85,6 +180,11 @@ footer {
           font-weight: 300;
           font-size: 13px;
           line-height: 200%;
+
+          @media (max-width: 768px) {
+            width: fit-content;
+            flex: 1;
+          }
 
           &:focus {
             outline: none;
@@ -99,6 +199,10 @@ footer {
           text-align: center;
           box-shadow: none;
           flex-shrink: 0;
+
+          @media (max-width: 768px) {
+            width: 80px;
+          }
         }
       }
     }

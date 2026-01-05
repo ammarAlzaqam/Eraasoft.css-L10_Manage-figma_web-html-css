@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view">
+    <!--//! Animate.css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--//! FontAwesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--//! Style file -->
     <link rel="stylesheet" href="./css/index.css">
     <title>Manage website</title>
 </head>
@@ -16,7 +20,7 @@
 <body>
     <!--//TODO>> 1-Header -->
     <header>
-        <div class="container">
+        <div class="container wow animate__animated animate__fadeInDown">
             <img class="logo_img" src="./images/LOGO.svg" alt="LOGO">
             <nav>
                 <a href="#pricing">Pricing</a>
@@ -34,13 +38,13 @@
     <!--//TODO>> 2-Hero Section -->
     <section id="hero_sec">
         <div class="container">
-            <div class="left">
+            <div class="left wow animate__animated animate__fadeInLeft">
                 <h1 class="head_text">Bring everyone together to build better products.</h1>
                 <p class="des">Manage makes it simple for software teams to plan day-to-day tasks while keeping the
                     larger team goals in view.</p>
                 <button class="cta">Get Started</button>
             </div>
-            <div class="right">
+            <div class="right wow animate__animated animate__fadeInRight">
                 <img src="./images/hero-sec/1.png" alt="hero_sec_img">
                 <img src="./images/hero-sec/2.png" alt="hero_sec_img">
                 <img src="./images/hero-sec/3.png" alt="hero_sec_img">
@@ -53,12 +57,12 @@
     <!--//TODO>> 3-About Us -->
     <section id="about">
         <div class="container">
-            <div class="left">
+            <div class="left wow animate__animated animate__fadeInLeft">
                 <h2 class="title">What’s different about Manage?</h2>
                 <p class="des">Manage provides all the functionality your team needs, without the complexity. Our
                     software is tailor-made for modern digital product teams. </p>
             </div>
-            <div class="right">
+            <div class="right wow animate__animated animate__fadeInRight">
                 <div class="content_card">
                     <div class="card_head">
                         <h4 class="card_number">01</h4>
@@ -98,8 +102,8 @@
 
     <!--//TODO>> 4-Our Client said -->
     <section id="said">
-        <h2 class="title">What they’ve said</h2>
-        <div class="slider">
+        <h2 class="title wow animate__animated animate__flipInX">What they’ve said</h2>
+        <div class="slider wow animate__animated animate__fadeInUp">
             <div class="slide">
                 <img src="./images/said/1.jpg" alt="client_avatar" class="avatar">
                 <h3 class="card_title">Ammar Alzaqam</h3>
@@ -172,7 +176,7 @@
                 </p>
             </div>
         </div>
-        <button class="cta">Get Started</button>
+        <button class="cta wow animate__animated animate__fadeIn">Get Started</button>
 
         <img src="./images/said/vector.png" alt="side-vector-image" class="vector_img">
     </section>
@@ -180,8 +184,8 @@
     <!--//TODO>> 5-Simplify -->
     <section id="simplify">
         <div class="container">
-            <h2 class="title light">Simplify how your team works today.</h2>
-            <button class="cta light">Get Started</button>
+            <h2 class="title light wow animate__animated animate__flipInX">Simplify how your team works today.</h2>
+            <button class="cta light wow animate__animated animate__lightSpeedInRight">Get Started</button>
 
             <!--//* Vectors -->
             <img src="./images/simplify/vector-left.png" alt="vector_img" class="left_vector_img">
@@ -192,9 +196,9 @@
 
     <!--//TODO>> 6-Footer -->
     <footer>
-        <div class="container">
-            <!-- <p class="copyright"></p> -->
+        <div class="container wow animate__animated animate__fadeInDown">
             <div class="media">
+                <p class="copyright">Copyright 2020. All Rights Reserved</p>
                 <img class="logo_img" src="./images/footerLOGO.png" alt="">
                 <div class="social_icons">
                     <i class="fa-brands fa-facebook"></i>
@@ -207,14 +211,21 @@
             <div class="info_wrapper">
                 <div class="links">
                     <div class="left">
-                        <a href="#home">Home</a>
-                        <a href="#pricing">Pricing</a>
-                        <a href="#products">Products</a>
-                        <a href="#about-us">About Us</a>
+                        <div class="two_links">
+                            <a href="#home">Home</a>
+                            <a href="#pricing">Pricing</a>
+                        </div>
+                        <div class="two_links">
+                            <a href="#products">Products</a>
+                            <a href="#about-us">About Us</a>
+                        </div>
                     </div>
                     <div class="right">
-                        <a href="#careers">Careers</a>
-                        <a href="#community">Community</a>
+                        <div class="two_links">
+                            <a href="#careers">Careers</a>
+                            <a href="#community">Community</a>
+                        </div>
+
                         <a href="#privacy-policy">Privacy Policy</a>
 
                     </div>
@@ -227,6 +238,11 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
